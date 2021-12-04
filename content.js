@@ -23,7 +23,7 @@ if (window.location.origin.match(/www\.youtube\.com/)) {
     linear-gradient(
       to right,
       #493ae8 ${data.likesPercentAge}%, 
-      red ${data.dislikesPercentAge}%
+      red 10%
     )
       1 /              
       0px 0px 3px 0px /  
