@@ -16,12 +16,17 @@ def handler(event, context):
     _dislikes = int(video_by_id["dislikeCount"])
     dislikes = _dislikes / 1000 if _dislikes > 1000 else _dislikes
     return {
-        "headers": {"Content-Type": "application/json"},
+        "headers": {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Headers": "Content-Type",
+            "Access-Control-Allow-Origin": "https://www.youtube.com",
+            "Access-Control-Allow-Methods": "OPTIONS,GET",
+        },
         "statusCode": 200,
         "body": dumps(
             {
-                "likes": f"{likes:.2f}K" if _likes > 1000 else likes,
-                "dislikes": f"{dislikes:.2f}K" if _dislikes > 1000 else dislikes,
+                "likes": f"{likes:.1f}K" if _likes > 1000 else likes,
+                "dislikes": f"{dislikes:.1f}K" if _dislikes > 1000 else dislikes,
                 "likesPercentAge": round((_likes / (_likes + _dislikes)) * 100),
                 "dislikesPercentAge": round((_dislikes / (_likes + _dislikes)) * 100),
             }
