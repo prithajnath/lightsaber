@@ -41,6 +41,10 @@ function renderOrUpdateBar() {
   }
 }
 
+window.addEventListener("load", (event) => {
+  renderOrUpdateBar();
+});
+
 const YtdWatchFlexy = document.querySelector("#page-manager > ytd-watch-flexy");
 const config = { attributes: true };
 
