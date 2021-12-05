@@ -1,0 +1,24 @@
+{
+  "name": "lightsaber",
+  "version": "1.0.0",
+  "description": "Chrome extenstion to show likes/dislikes on a YouTube video",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prithajnath/lightsaber.git"
+  },
+  "author": "Prithaj Nath",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prithajnath/lightsaber/issues"
+  },
+  "homepage": "https://github.com/prithajnath/lightsaber#readme",
+  "dependencies": {
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1"
+  }
+}
